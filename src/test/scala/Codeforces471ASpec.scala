@@ -13,6 +13,7 @@ class Codeforces471ASpec extends FlatSpec with Matchers {
 
   "Codeforces471A" should "return Elephant" in {
     Codeforces471A.process(Array(4, 4, 5, 4, 4, 5)) should be("Elephant")
+    Codeforces471A.process(Array(4, 4, 4, 4, 4, 4)) should be("Elephant")
   }
 
   "Codeforces471A" should "return Alien" in {
