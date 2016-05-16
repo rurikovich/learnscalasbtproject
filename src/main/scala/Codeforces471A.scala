@@ -12,7 +12,7 @@ object Codeforces471A {
     var result = "Alien"
     val sBlocks = blocks.sortWith(_ < _)
 
-    var listGroupedBy4 = sBlocks.sliding(4).map((sl: Array[Int]) => sl.forall(s => s == sl(0))).toList
+    val listGroupedBy4 = sBlocks.sliding(4).map((sl: Array[Int]) => sl.forall(s => s == sl(0))).toList
 
     if (listGroupedBy4.contains(true)) {
       val by0: Boolean = listGroupedBy4(0)
