@@ -1,3 +1,5 @@
+
+
 /**
   * Created by User on 15.05.2016.
   */
@@ -14,11 +16,17 @@ object Codeforces454B {
 
     var res = -1
     for ((arr, i) <- doubleArr.sliding(n).toList.view.zipWithIndex) {
-
-      if (arr.sliding(2).forall(cn => cn(0) <= cn(1))) {
+      if (isArrNonDecreasing(arr)) {
         res = i
       }
     }
+    if (res > 0) {
+      res = n - res
+    }
     res
+  }
+
+  def isArrNonDecreasing(arr: Array[Int]): Boolean = {
+    arr.sliding(2).forall(cn => cn(0) <= cn(1))
   }
 }
